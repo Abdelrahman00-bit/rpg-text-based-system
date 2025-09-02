@@ -17,10 +17,10 @@ type Stats struct {
 
 // Character defines what every character must be able to do
 type CharacterMethods interface {
-    GetName() string
-    GetStats() Stats
-    EquipWeapon(w items.Weapon) error
-    EquipArmor(a items.Armor) error
-    Show() // show character info
+    GetName() string                    // to get the name of the character
+    GetStats() Stats                   //  to get the stats of the charcter
+    EquipWeapon(w items.Weapon) error //   to equip a weapon
+    EquipArmor(a items.Armor) error  //    to equip an armor
+    ShowStats()                     //     show character info
 }
 

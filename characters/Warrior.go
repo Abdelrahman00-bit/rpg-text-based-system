@@ -7,7 +7,8 @@ import (
 	"errors"
 	"fmt"
 )
-// this the OOP of worior 
+
+// this the OOP of worior
 type Warrior struct {
     Name   string
     Base   Stats
@@ -37,7 +38,7 @@ func (w *Warrior) GetStats() Stats {
 
 func (w *Warrior) EquipWeapon(weapon items.Weapon) error {
     if weapon.GetType() != "sword" {
-        return errors.New("Warriors can only equip swords")
+        return errors.New("warriors can only equip swords")
     }
     w.Weapon = weapon
     return nil
@@ -45,13 +46,13 @@ func (w *Warrior) EquipWeapon(weapon items.Weapon) error {
 
 func (w *Warrior) EquipArmor(armor items.Armor) error {
     if armor.GetType() == "robe" {
-        return errors.New("Warriors cannot equip robes")
+        return errors.New("warriors cannot equip robes")
     }
     w.Armor = armor
     return nil
 }
 
-func (w *Warrior) Show() {
+func (w *Warrior) ShowStats() {
     stats := w.GetStats()
     fmt.Printf("Character: %s (Warrior)\n", w.Name)
     fmt.Printf("Health: %d\nStrength: %d\nDefense: %d\nMagic: %d\n",
