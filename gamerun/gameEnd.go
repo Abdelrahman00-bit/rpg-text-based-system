@@ -1,3 +1,5 @@
+//2. GameEnd   One runs the final loop, which allows you to exit the game or view player data.
+
 package gamerun
 
 import (

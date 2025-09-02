@@ -1,3 +1,5 @@
+//1. GameStart file runs the character creation, selects the character type, weapons and armor.
+
 package gamerun
 
 import (
